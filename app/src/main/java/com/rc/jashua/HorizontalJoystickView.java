@@ -166,7 +166,7 @@ public class HorizontalJoystickView extends JoystickView implements Runnable {
 		return (int) (100 * Math.abs(xPosition - centerX) / joystickRadius);
 	}
 
-	private int getDirection() {
+	private String getDirection() {
         if (xPosition < centerX) {
             return LEFT;
         } else if (xPosition > centerX) {

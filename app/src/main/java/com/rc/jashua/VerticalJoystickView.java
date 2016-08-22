@@ -168,14 +168,14 @@ public class VerticalJoystickView extends JoystickView implements Runnable {
 		return (int) (100 * Math.abs(yPosition - centerY) / joystickRadius);
 	}
 
-	private int getDirection() {
+	private String getDirection() {
         if (yPosition < centerY) {
             return FORWARD;
         } else if (yPosition > centerY) {
             return BACKWARD;
         }
 
-        return CENTER;
+        return STOP;
 	}
 
 	@Override
